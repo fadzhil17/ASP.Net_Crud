@@ -1,0 +1,15 @@
+﻿@model ProjectCompany.Models.Department
+
+<h2>Edit Department</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="hidden" asp-for="UpdateDate" value="@DateTime.Now" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
